@@ -1,0 +1,3 @@
+include ':ScryfallApi'
+include ':app'
+rootProject.name = "Magic Helper"
