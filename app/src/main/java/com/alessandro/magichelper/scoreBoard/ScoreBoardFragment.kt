@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.alessandro.magichelper.R
+import com.bumptech.glide.util.ViewPreloadSizeProvider
 import kotlinx.android.synthetic.main.fragment_score_board.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -44,6 +45,8 @@ class ScoreBoardFragment : Fragment() {
     private fun setupViewClickListeners() {
         resetLifeTotalsImageView.setOnClickListener {
             scoreBoardViewModel.resetLifeTotals()
+            yourDiceRollImageView.visibility = View.GONE
+            opponentDieRollImageView.visibility = View.GONE
         }
         addLifeTotalImageView.setOnClickListener {
             scoreBoardViewModel.addLifeTotal()
@@ -57,7 +60,33 @@ class ScoreBoardFragment : Fragment() {
         removeOpponentLifeTotalImageView.setOnClickListener {
             scoreBoardViewModel.removeOpponentLifeTotal()
         }
+        diceRollImageView.setOnClickListener {
+            displayDiceRollResult(scoreBoardViewModel.diceRoll())
+        }
     }
 
+    private fun displayDiceRollResult(result: Pair<Int, Int>) {
+        yourDiceRollImageView.visibility = View.VISIBLE
+        opponentDieRollImageView.visibility = View.VISIBLE
+
+        getImageResourceForResult(result.first)?.let {
+            yourDiceRollImageView.setImageResource(it)
+        }
+        getImageResourceForResult(result.second)?.let {
+            opponentDieRollImageView.setImageResource(it)
+        }
+    }
+
+    private fun getImageResourceForResult(result: Int): Int? {
+        return when (result) {
+            1 -> R.drawable.die_1
+            2 -> R.drawable.die_2
+            3 -> R.drawable.die_3
+            4 -> R.drawable.die_4
+            5 -> R.drawable.die_5
+            6 -> R.drawable.die_6
+            else -> null
+        }
+    }
 
 }
