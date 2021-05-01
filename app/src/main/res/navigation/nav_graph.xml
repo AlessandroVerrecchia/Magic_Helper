@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/scoreBoardFragment">
+
+    <fragment
+        android:id="@+id/scoreBoardFragment"
+        android:name="com.alessandro.magichelper.scoreBoard.ScoreBoardFragment"
+        tools:layout="@layout/fragment_score_board" />
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.alessandro.magichelper.search.SearchFragment"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/quickLinksFragment"
+        android:name="com.alessandro.magichelper.quickLinks.QuickLinksFragment"
+        tools:layout="@layout/fragment_quick_links" />
+
+</navigation>
