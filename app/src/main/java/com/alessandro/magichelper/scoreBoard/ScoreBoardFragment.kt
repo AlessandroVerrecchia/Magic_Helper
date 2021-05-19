@@ -6,10 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import com.alessandro.magichelper.R
-import com.bumptech.glide.util.ViewPreloadSizeProvider
 import kotlinx.android.synthetic.main.fragment_score_board.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
+
 
 class ScoreBoardFragment : Fragment() {
 
@@ -63,6 +64,9 @@ class ScoreBoardFragment : Fragment() {
         diceRollImageView.setOnClickListener {
             displayDiceRollResult(scoreBoardViewModel.diceRoll())
         }
+        multiPlayerImageView.setOnClickListener {
+            navigateToMultiPlayerFragment()
+        }
     }
 
     private fun displayDiceRollResult(result: Pair<Int, Int>) {
@@ -87,6 +91,11 @@ class ScoreBoardFragment : Fragment() {
             6 -> R.drawable.die_6
             else -> null
         }
+    }
+
+    private fun navigateToMultiPlayerFragment() {
+        val action = ScoreBoardFragmentDirections.actionToMultiPlayerFragment()
+        findNavController().navigate(action)
     }
 
 }

@@ -8,7 +8,15 @@
     <fragment
         android:id="@+id/scoreBoardFragment"
         android:name="com.alessandro.magichelper.scoreBoard.ScoreBoardFragment"
-        tools:layout="@layout/fragment_score_board" />
+        tools:layout="@layout/fragment_score_board">
+        <action
+            android:id="@+id/actionToMultiPlayerFragment"
+            app:destination="@+id/MultiPlayerFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
 
     <fragment
         android:id="@+id/searchFragment"
@@ -19,5 +27,11 @@
         android:id="@+id/quickLinksFragment"
         android:name="com.alessandro.magichelper.quickLinks.QuickLinksFragment"
         tools:layout="@layout/fragment_quick_links" />
+
+    <fragment
+        android:id="@+id/MultiPlayerFragment"
+        android:name="com.alessandro.magichelper.scoreBoard.MultiPlayerFragment"
+        tools:layout="@layout/fragment_multi_player" />
+
 
 </navigation>

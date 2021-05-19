@@ -1,15 +1,12 @@
 package com.alessandro.magichelper
 
+import android.content.pm.ActivityInfo
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.alessandro.magichelper.quickLinks.QuickLinksFragment
-import com.alessandro.magichelper.scoreBoard.ScoreBoardFragment
-import com.alessandro.magichelper.search.SearchFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -21,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         }
         bottomNavView.setupWithNavController(navController)
         handleBottomNavItemReselection(navController)
+        addDestinationChangeListener(navController)
     }
 
     private fun handleBottomNavItemReselection(navController: NavController) {
@@ -28,4 +26,21 @@ class MainActivity : AppCompatActivity() {
             navController.navigate(menuItem.itemId)
         }
     }
+
+    private fun addDestinationChangeListener(navController: NavController) {
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when (destination.id) {
+                R.id.MultiPlayerFragment -> {
+                    requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
+                    bottomNavView.visibility = View.GONE
+                }
+                else -> {
+                    requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT
+                    bottomNavView.visibility = View.VISIBLE
+                }
+            }
+        }
+    }
+
+
 }
