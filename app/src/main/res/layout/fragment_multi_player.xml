@@ -23,7 +23,8 @@
             android:layout_columnWeight="1">
 
             <View
-                android:id="@+id/player1AddLifeTextView"
+                android:focusable="true"
+                android:id="@+id/player1AddLifeView"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -33,7 +34,8 @@
                 app:layout_constraintWidth_percent="0.5" />
 
             <View
-                android:id="@+id/player1MinusLifeTextView"
+                android:focusable="true"
+                android:id="@+id/player1MinusLifeView"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -65,7 +67,8 @@
             android:layout_columnWeight="1">
 
             <View
-                android:id="@+id/player2AddLifeTextView"
+                android:focusable="true"
+                android:id="@+id/player2AddLifeView"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -75,7 +78,8 @@
                 app:layout_constraintWidth_percent="0.5" />
 
             <View
-                android:id="@+id/player2MinusLifeTextView"
+                android:focusable="true"
+                android:id="@+id/player2MinusLifeView"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -110,7 +114,8 @@
             android:layout_columnWeight="1">
 
             <View
-                android:id="@+id/player3MinusLifeTextView"
+                android:focusable="true"
+                android:id="@+id/player3MinusLifeView"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -120,7 +125,8 @@
                 app:layout_constraintWidth_percent="0.5" />
 
             <View
-                android:id="@+id/player3AddLifeTextView"
+                android:focusable="true"
+                android:id="@+id/player3AddLifeView"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -154,7 +160,8 @@
             android:layout_columnWeight="1">
 
             <View
-                android:id="@+id/player4MinusLifeTextView"
+                android:focusable="true"
+                android:id="@+id/player4MinusLifeView"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -164,7 +171,8 @@
                 app:layout_constraintWidth_percent="0.5" />
 
             <View
-                android:id="@+id/player4AddLifeTextView"
+                android:focusable="true"
+                android:id="@+id/player4AddLifeView"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 app:layout_constraintBottom_toBottomOf="parent"

@@ -1,5 +1,6 @@
 package com.alessandro.magichelper.di
 
+import com.alessandro.magichelper.scoreBoard.MultiPlayerViewModel
 import com.alessandro.magichelper.scoreBoard.ScoreBoardViewModel
 import com.alessandro.magichelper.search.SearchViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -18,4 +19,7 @@ val appModule: Module = module {
         ScoreBoardViewModel()
     }
 
+    viewModel {
+        MultiPlayerViewModel()
+    }
 }
