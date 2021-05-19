@@ -30,6 +30,9 @@ class MainActivity : AppCompatActivity() {
     private fun addDestinationChangeListener(navController: NavController) {
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
+                R.id.splashFragment -> {
+                    bottomNavView.visibility = View.VISIBLE
+                }
                 R.id.MultiPlayerFragment -> {
                     requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
                     bottomNavView.visibility = View.GONE
