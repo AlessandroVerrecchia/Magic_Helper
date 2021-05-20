@@ -22,6 +22,7 @@ class QuickLinksFragment : Fragment() {
         private const val JEUX_3_DRAGON = "https://www.jeux3dragons.com/"
         private const val MTG_TOP_8 = "https://mtgtop8.com/"
         private const val TCG_PLAYER = "https://www.tcgplayer.com/"
+        private const val EDHREC = "https://edhrec.com/"
     }
 
     override fun onCreateView(
@@ -60,6 +61,9 @@ class QuickLinksFragment : Fragment() {
         }
         ftfTextView.setOnClickListener {
             openUrl(FACE_TO_FACE_GAMES)
+        }
+        edhRecTextView.setOnClickListener {
+            openUrl(EDHREC)
         }
     }
 

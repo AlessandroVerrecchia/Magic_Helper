@@ -17,6 +17,7 @@
         android:layout_marginEnd="16dp"
         android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
         android:text="Channel Fireball"
+        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,6 +31,7 @@
         android:layout_marginEnd="16dp"
         android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
         android:text="Star City Games"
+        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cfbTextView" />
@@ -43,6 +45,7 @@
         android:layout_marginEnd="16dp"
         android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
         android:text="TCG Player"
+        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scgTextView" />
@@ -56,6 +59,7 @@
         android:layout_marginEnd="16dp"
         android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
         android:text="Face To Face Games"
+        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tcgpTextView" />
@@ -69,6 +73,7 @@
         android:layout_marginEnd="16dp"
         android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
         android:text="Jeux 3 Dragons"
+        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ftfTextView" />
@@ -82,6 +87,7 @@
         android:layout_marginEnd="16dp"
         android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
         android:text="Top Deck Hero"
+        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/j3dTextView" />
@@ -95,6 +101,7 @@
         android:layout_marginEnd="16dp"
         android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
         android:text="MTG Goldfish Metagame"
+        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tdhTextView" />
@@ -108,8 +115,23 @@
         android:layout_marginEnd="16dp"
         android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
         android:text="MTG Top8"
+        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/goldfishTextView" />
+
+    <TextView
+        android:id="@+id/edhRecTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:text="EDHREC"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mtgt8TextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
