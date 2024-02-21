@@ -8,3 +8,6 @@ I needed an app for all my Magic: The Gathering needs so i made one.
 - Quick Links for everything Magic
 
 Available on the PlayStore : https://play.google.com/store/apps/details?id=com.alessandro.magichelper 
+
+
+PRIVACY POLICY : This app doesn't use any data from its users.
