@@ -23,6 +23,7 @@ class QuickLinksFragment : Fragment() {
         private const val MTG_TOP_8 = "https://mtgtop8.com/"
         private const val TCG_PLAYER = "https://www.tcgplayer.com/"
         private const val EDHREC = "https://edhrec.com/"
+        private const val MTG_QC = "https://mtgquebec.ca/"
     }
 
     override fun onCreateView(
@@ -64,6 +65,9 @@ class QuickLinksFragment : Fragment() {
         }
         edhRecTextView.setOnClickListener {
             openUrl(EDHREC)
+        }
+        mtgQcTextView.setOnClickListener {
+            openUrl(MTG_QC)
         }
     }
 

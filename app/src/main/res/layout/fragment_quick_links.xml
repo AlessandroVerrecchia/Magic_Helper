@@ -134,4 +134,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mtgt8TextView" />
 
+    <TextView
+        android:id="@+id/mtgQcTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:text="MTG Quebec"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edhRecTextView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
